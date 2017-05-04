@@ -293,14 +293,13 @@ declare namespace Msal {
         private _clockSkew;
         private _cacheStorage;
         private _tokenReceivedCallback;
-        user: User;
+        private _user;
         clientId: string;
         private authorityInstance;
         authority: string;
         validateAuthority: boolean;
         redirectUri: string;
         postLogoutredirectUri: string;
-        correlationId: string;
         navigateToLoginRequestUrl: boolean;
         constructor(clientId: string, authority: string, tokenReceivedCallback: (errorDesc: string, token: string, error: string, tokenType: string) => void, validateAuthority?: boolean);
         loginRedirect(scopes?: Array<string>, extraQueryParameters?: string): void;
